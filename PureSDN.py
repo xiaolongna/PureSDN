@@ -131,8 +131,7 @@ class ShortestForwarding(app_manager.RyuApp):
 		"""
 			Send packet out packet to assigned datapath.
 		"""
-		out = self._build_packet_out(datapath, buffer_id,
-									 src_port, dst_port, data)
+		out = self._build_packet_out(datapath, buffer_id, src_port, dst_port, data)
 		if out:
 			datapath.send_msg(out)
 
